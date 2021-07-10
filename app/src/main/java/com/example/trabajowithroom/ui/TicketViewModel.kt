@@ -10,14 +10,10 @@ class TicketViewModel (private val repository: TicketsRepository) : ViewModel(){
 
     val ticketLiveData = MutableLiveData<List<Ticket>>()
 
-    init {
 
+
+    fun getAll(){
         ticketLiveData.value = repository.getAll()
-
-    }
-
-    fun getAll(): List<Ticket>{
-        return repository.getAll()
     }
 
 

@@ -23,12 +23,9 @@ class AddActivity : AppCompatActivity() {
 
     private fun addDataToDatabase(){
 
-        val titulo = bindingAdd.tvTitulo.text.toString()
-        val contenido = bindingAdd.tvDescripcion.text.toString()
-        val butonSave = bindingAdd.buttonAceptar
-
-
-        butonSave.setOnClickListener {
+        bindingAdd.buttonAceptar.setOnClickListener {
+            val titulo = bindingAdd.tvTitulo.text.toString()
+            val contenido = bindingAdd.tvDescripcion.text.toString()
 
             if(titulo.isNotEmpty() && contenido.isNotEmpty()){
             vm.saveTicket(titulo, contenido)

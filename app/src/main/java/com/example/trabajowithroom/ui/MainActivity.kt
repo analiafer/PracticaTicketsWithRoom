@@ -25,7 +25,14 @@ class MainActivity : AppCompatActivity() {
         recyclerView()
         observer()
 
+        viewModel.getAll()
 
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.getAll()
     }
 
 
